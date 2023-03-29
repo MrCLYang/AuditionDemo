@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--自定义属性-->
+<resources>
+    <declare-styleable name="MyView">
+        <attr name="defaults_size" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="CustomTitleView">
+        <attr name="titleText" format="string"></attr>
+        <attr name="titleTextColor" format="color"></attr>
+        <attr name="titleTextSize" format="dimension"></attr>
+    </declare-styleable>
+</resources>

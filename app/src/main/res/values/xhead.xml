@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="xhead">
+        <attr name="type" format="integer"/>
+        <attr name="title" format="string"/>
+        <attr name="left_icon" format="reference"/>
+        <attr name="left_text" format="string"/>
+        <attr name="right_text" format="string"/>
+    </declare-styleable>
+</resources>
