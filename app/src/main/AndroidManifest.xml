@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.auditiondemo">
 
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -15,18 +16,39 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AuditionDemo">
-        <activity android:name=".RecyclerViewDemo.RecyclerViewActivity" android:exported="true">
+        <service
+            android:name=".ServiceDemo.ForegroundService"
+            android:enabled="true"
+            android:exported="true"></service>
+
+        <activity
+            android:name=".ServiceDemo.ForegroundActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RxJavaDemo.RxJavaActivity"></activity>
-        <activity android:name=".FactoryModelDemo.FactoryActivity"></activity>
+        <activity
+            android:name=".ServiceDemo.ServiceActivity"
+            android:exported="true"></activity>
+
+        <service
+            android:name=".ServiceDemo.MyService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".RecyclerViewDemo.RecyclerViewActivity"
+            android:exported="true" />
+        <activity android:name=".RxJavaDemo.RxJavaActivity" />
+        <activity android:name=".FactoryModelDemo.FactoryActivity" />
         <activity
             android:name=".UtilsDemo.UtilsActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".MyViewDemo.MyViewActivity"
             android:exported="true" />
@@ -43,8 +65,7 @@
         <activity android:name=".SingletonModelDemo.MainActivity" />
         <activity
             android:name=".Okhttp3Demo.Okhttp3Activity"
-            android:exported="true">
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".RetrofitDemo.RetrofitActivity"
             android:exported="true" />
