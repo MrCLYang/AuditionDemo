@@ -1,12 +1,14 @@
 package com.example.auditiondemo.FactoryModelDemo;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.ViewDataBinding;
 
 import android.os.Bundle;
 
 import com.example.auditiondemo.R;
+import com.example.auditiondemo.databinding.ActivityFactoryBinding;
 
-public class FactoryActivity extends BaseActivity{
+public class FactoryActivity extends BaseActivity<ActivityFactoryBinding>{
 
     @Override
     protected int getLayoutResId() {
@@ -14,7 +16,7 @@ public class FactoryActivity extends BaseActivity{
     }
 
     @Override
-    protected void initView() {
-        //初始化视图
+    protected void initView(ActivityFactoryBinding db) {
+
     }
 }
