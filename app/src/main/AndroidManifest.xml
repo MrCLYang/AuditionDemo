@@ -16,23 +16,32 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AuditionDemo">
-        <activity android:name=".CustomViewDemo.CustomViewActivity" android:exported="true">
+        <activity
+            android:name=".AlertDialogUtilsDemo.BaseAlertDialogActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AlertDialogUtilsDemo.AlertDialogMainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".CustomViewDemo.CustomViewActivity"
+            android:exported="true">
+        </activity>
 
         <service
             android:name=".ServiceDemo.ForegroundService"
             android:enabled="true"
             android:exported="true" />
+
         <activity
             android:name=".ServiceDemo.ForegroundActivity"
             android:exported="true"
-            android:launchMode="singleTask">
-        </activity>
+            android:launchMode="singleTask" />
         <activity
             android:name=".ServiceDemo.ServiceActivity"
             android:exported="true" />
